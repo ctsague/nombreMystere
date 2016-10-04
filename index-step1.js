@@ -9,7 +9,7 @@ function main(){
 		
 		// Récupérer le contenu de mon input
 		var contenu = $("#input").val();
-		console.log(contenu);
+		
 		// Comparer ce contenu à un nombre que vous choisissez
 			// Si le contenu est égal
 			// Afficher une alert Gagné
