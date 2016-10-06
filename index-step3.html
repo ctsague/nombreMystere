@@ -5,20 +5,23 @@
 	<title>Nombre mystère - Step 03</title>
 </head>
 <body>
-	<h1>Step 3</h1>
+	<section class="main">
+		<h1>Step 3</h1>
 
-	<!-- Créer un input où l'utilisateur va rentrer son nombre -->
-	<input type="text">
+		<!-- Créer un input où l'utilisateur va rentrer son nombre -->
+		<input type="text">
 
-	<!-- Créer un bouton qui permettra de valider -->
-	<button>Valider</button><br>
-	<!-- Créer un espace texte qui va afficher le nombre de tentatives restantes -->
-	
-	<textarea class="compte" name="textarea" rows="10" cols="30">le compteur est à 0</textarea>
-	
-
+		<!-- Créer un bouton qui permettra de valider -->
+		<button class="jouer">Play</button><br>
+		
+		<!-- Créer un espace texte qui va afficher le nombre de tentatives restantes -->
+		 <!--<textarea class="compte" name="textarea" rows="10" cols="30">le compteur est à 0</textarea>-->
+		<div class="decompter">
+			<span value="">3</span>
+		</div>
+	</section>
 	<!-- Relier le fichier js  -->
 	<script src="node_modules/jquery/dist/jquery.js"></script>	
-	<script src="index-step2.js"></script>
+	<script src="index-step3.js"></script>
 </body>
 </html>
