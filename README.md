@@ -22,3 +22,32 @@ Il faut deviner le nombre choisi par l'ordinateur.
 * Avant de commencer, choisir les valeurs minimale et maximale du nombre que l'ordinateur va choisir.
 
 ## Step 5
+
+/*
+REFACTORISATION
+if ()
+$('div').html('msg')
+vies++;
+if()
+$().html('msg')
+vies++;
+if()
+$().html('msg')
+vies--;
+
+refactorisation
+
+fonction resultat(msg,incr){
+	$('.msg').html(msg);
+	vie = life + incr;
+	}
+
+qui donne
+if()
+resultat('mauvaise reponse', -1)
+if()
+resultat('mauvaise reponse', -1)
+if()
+resultat('bonne reponse', 1)
+
+ */
