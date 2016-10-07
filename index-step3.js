@@ -7,7 +7,7 @@ function main(){
 	var vies = 3;
 	// Créer et initialiser une variable 'globale' qui 
 	// va stocker le nombre "aléatoire" mystère.
-	var nbmyst = Math.round(Math.random() * 51); //on veut des nombres entre 0 et 50
+	var nbmyst = parseInt(Math.random()*51); //on veut des nombres entre 0 et 50
 	console.log(nbmyst);
 	
 
@@ -23,39 +23,38 @@ function main(){
 		- démarrer une nouvelle partie
 	*/
 		if(contenu==nbmyst){
-			alert("You Won!");
+			alert("You WON!, Play again?");
 			demarrerPartie();
-			//$("input").val(" ");
 
 			// Sinon s'il est supérieur
 			// Afficher une alert Perdu, votre nombre est trop grand	
-			} else if(contenu > nbmyst){
-				alert("Perdu, votre nombre est trop Grand!");
+		} else if(contenu > nbmyst){
+			alert("Perdu, votre nombre est trop Grand!");
 				// Dans les cas où c'est perdu, diminuer le nombre de tentatives
-				vies--;
+			vies--;
 			// Actualiser la zone html affichant le nombre de tentatives
-				$(".decompter").text(vies);
-				//partiePerdu();
-				$(".decompter").text(vies);
-				if(vies==0) {demarrerPartie();}
-				$("input").val(" ");
-				//demarrerPartie();
-
-				
+			$(".decompter").text(vies);
+			partiePerdu();
+				/*if(vies==0) {
+					alert("Game OVER!!!");
+					demarrerPartie();
+				}*/
+				//$("input").val(" ");
+	
 			// Sinon s'il est inférieur
 			// Afficher une alert Perdu, votre nombre est trop petit
-			} else {
-					alert("Perdu, votre nombre est trop Petit!" );
+		} else {
+			alert("Perdu, votre nombre est trop Petit!" );
 			// Dans les cas où c'est perdu, diminuer le nombre de tentatives
-					vies--;
+			vies--;
 			// Actualiser la zone html affichant le nombre de tentatives
-					$(".decompter").text(vies);
-					
-					//if(vies==0) { demarrerPartie(); }
-					$("input").val(" ");
-			
-				 	
-			}
+			$(".decompter").text(vies);
+			partiePerdu();
+					/*if(vies==0) { 
+						alert("Game OVER!!!");
+						demarrerPartie();
+						 }*/
+		}
 
 			/*if(vie===0){
 				altert("vous avez perdu");
@@ -85,15 +84,22 @@ function main(){
 		nbmyst = Math.round(Math.random() * 51); 
 		console.log(nbmyst);
 		$(".decompter").text(vies);
-	}
+		//$("input").reset();
+		$("input").val(0);
+	};
 
 	
 	function partiePerdu(){
 		if(vies===0 ){
 			alert("Game Over");
+			demarrerPartie();
 		}
 	};
 
+	funtion actualiser(){
+		vies--;
+		$(".decompter").text(vies);
+	};
 
 	
 	/*
@@ -106,30 +112,4 @@ function main(){
 }
 
 
-/*
-if ()
-$('div').html('msg')
-vies++;
-if()
-$().html('msg')
-vies++;
-if()
-$().html('msg')
-vies--;
 
-refactorisation
-
-fonction resultat(msg,incr){
-	$('.msg').html(msg);
-	vie = life + incr;
-	}
-
-qui donne
-if()
-resultat('mauvaise reponse', -1)
-if()
-resultat('mauvaise reponse', -1)
-if()
-resultat('bonne reponse', 1)
-
- */
