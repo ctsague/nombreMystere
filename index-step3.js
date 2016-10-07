@@ -30,10 +30,11 @@ function main(){
 			// Afficher une alert Perdu, votre nombre est trop grand	
 		} else if(contenu > nbmyst){
 			alert("Perdu, votre nombre est trop Grand!");
-				// Dans les cas où c'est perdu, diminuer le nombre de tentatives
-			vies--;
+			// Dans les cas où c'est perdu, diminuer le nombre de tentatives
 			// Actualiser la zone html affichant le nombre de tentatives
-			$(".decompter").text(vies);
+			//vies--;
+			//$(".decompter").text(vies);
+			partieActualiser();
 			partiePerdu();
 				/*if(vies==0) {
 					alert("Game OVER!!!");
@@ -46,9 +47,10 @@ function main(){
 		} else {
 			alert("Perdu, votre nombre est trop Petit!" );
 			// Dans les cas où c'est perdu, diminuer le nombre de tentatives
-			vies--;
 			// Actualiser la zone html affichant le nombre de tentatives
-			$(".decompter").text(vies);
+			//vies--;
+			//$(".decompter").text(vies);
+			PartieActualiser();
 			partiePerdu();
 					/*if(vies==0) { 
 						alert("Game OVER!!!");
@@ -96,7 +98,7 @@ function main(){
 		}
 	};
 
-	funtion actualiser(){
+	function PartieActualiser(){
 		vies--;
 		$(".decompter").text(vies);
 	};
